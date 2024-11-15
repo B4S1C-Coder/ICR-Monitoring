@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  conpot:
+    image: conpot/conpot
+    container_name: conpot
+    network_mode: conpot-network
+    volumes:
+      - ./conpot_rabbitmq_handler.py:/app/conpot_rabbitmq_handler.py
+    environment:
+      - PYTHONPATH=/app
+    command: >
+      /home/conpot/.local/lib/python3.6/site-packages/conpot-0.6.0-py3.6.egg/bin/conpot --template /home/conpot/.local/lib/python3.6/site-packages/conpot-0.6.0-py3.6.egg/conpot/templates/default
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    network_mode: conpot-network
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+

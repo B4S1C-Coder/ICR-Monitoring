@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif
+}
+
+.header{
+    height:15vh;
+    background-color: black;
+}
+.body{
+    height: 85vh;
+
+    background-image: url(Screenshot\ 2024-11-16\ 012630.png) ;
+    background-size: cover;
+    display: flex;
+}
+.points{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: rgb(0, 194, 32);
+    position: relative;
+    top: 10px;
+    gap: 10px;
+    margin: 20px;
+    /* border: 2px solid rgb(98, 255, 0); */
+    /* flex-direction:row; */
+}
+.points:hover{
+    cursor:pointer;
+    .infobox{
+        visibility:visible;
+    }
+}
+.point1 {
+    top: 372px;
+    left: 345px;
+}
+.point2 {
+    top: 171px;
+    left: 395px;
+}
+.point3 {
+    top: 343px;
+    left: 500px;
+}
+.point4 {
+    top: 90px;
+    left: 322px;
+}
+.point5{
+    top: 245px;
+    left: 345px;
+}
+.point6{
+    top: 130px;
+    left: 428px;
+}
+.point7{
+    top: 252px;
+    left: 510px;
+}
+.point8{
+    top: 418px;
+    left: 483px;
+}
+.point9{
+    top: 194px;
+    left: 500px;
+}
+.point10{
+    top: 467px;
+    left: 513px;
+}
+.point11{
+    top: 292px;
+    left: -240px;
+}
+.infobox{
+    visibility: hidden;
+    position: absolute;
+    width:500px;
+    height: 200px;
+    border: 2px solid rgb(0, 128, 41);
+    background-color:rgba(0, 128, 41, 0.323) ;
+}
